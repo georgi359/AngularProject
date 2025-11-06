@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "documents": "Documents",
+    "news": "News",
+    "contacts": "Contacts",
+    "investor": "Investor information",
+    "reports": "Reports",
+    "other": "Other"
+  },
+  "home": {
+    "title": "Your modern, experience",
+    "subtitle": "Switch languages, browse documents and enjoy smooth transitions.",
+    "fade": {
+      "titleA": "Performance that feels effortless",
+      "textA": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.",
+      "titleB": "Subtle transitions, clear interactions",
+      "textB": "Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum."
+    },
+    "block1": {
+      "title": "Elevated typography meets clarity",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, turpis in sodales lobortis, dui lorem gravida ligula."
+    },
+    "block2": {
+      "title": "Designed for focus and flow",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tellus non lorem ullamcorper pulvinar. Mauris sodales."
+    },
+    "key": {
+      "localization": "Localization",
+      "localization_text": "Switch between English and Bulgarian instantly.",
+      "flex": "Flexbox Layout",
+      "flex_text": "Responsive structure, optimized for desktop and mobile.",
+      "anim": "Smooth Animations",
+      "anim_text": "Fade in/out effects guide attention without distraction."
+    }
+  },
+  "footer": {
+    "brand": "NovaSite"
+  }
+  ,
+  "contacts": {
+    "title": "Contacts",
+    "description": "Get in touch - we're happy to help.",
+    "addressLabel": "Office",
+    "phone": "Phone"
+  }
+}

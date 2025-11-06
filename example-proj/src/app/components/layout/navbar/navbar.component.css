@@ -1,0 +1,260 @@
+.header-wrapper {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 40;
+}
+
+.navbar {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 72rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	background-color: var(--surface-900-60);
+	backdrop-filter: blur(16px);
+	border-width: 1px;
+	border-color: var(--border-800-70);
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px var(--shadow-01), 0 4px 6px -4px var(--shadow-01);
+	border-radius: 1rem;
+	margin-top: 1rem;
+}
+
+.brand-link {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	border-radius: 0.5rem;
+}
+
+.brand-logo {
+	height: 2.75rem;
+	width: 2.75rem;
+	border-radius: 0.75rem;
+	object-fit: cover;
+	box-shadow: 0 0 0 0px #fff, 0 0 0 calc(1px + 0px) rgb(59 130 246 / 0.5), 0 0 #0000;
+}
+
+.brand-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.brand-title {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	color: var(--color-foreground);
+	letter-spacing: -0.025em;
+}
+
+.brand-subtitle {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	color: var(--color-muted);
+}
+
+.navbar-right {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.nav-menu-desktop {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.nav-item {
+	position: relative;
+}
+
+.nav-link {
+	/* Make anchors use the same inline-flex layout as buttons so sizing is identical */
+	display: inline-flex;
+	align-items: center;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-radius: 0.75rem;
+	color: var(--color-muted-2);
+	text-decoration: none; /* remove underline */
+	font-size: 0.95rem; /* unify size with dropdown */
+	line-height: 1.25rem;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	box-sizing: border-box;
+	min-height: 2rem; /* ensure consistent visual height */
+}
+
+.nav-link:hover {
+	color: rgb(255 255 255 / 1);
+	background-color: var(--surface-800-70);
+}
+
+.nav-link:focus-visible {
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+}
+
+.nav-link:focus-visible:focus-visible {
+	box-shadow: 0 0 0 0px #fff, 0 0 0 calc(2px + 0px) rgb(59 130 246 / 0.5), 0 0 #0000;
+}
+
+.nav-item-dropdown {
+	position: relative;
+    flex:0 , 1 auto;
+}
+
+.dropdown-button {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-radius: 0.75rem;
+	color: rgb(203 213 225 / 1);
+    background-color: transparent;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+    border-width: 0;
+	outline: 0px solid transparent;
+	outline-offset: 2px;
+	/* Match size and line-height with .nav-link so heights are consistent */
+	font-size: 0.95rem;
+	line-height: 1.25rem;
+	box-sizing: border-box;
+	min-height: 2rem; /* match nav-link height */
+}
+
+/* Ensure the label inside the dropdown button keeps its own line-height and
+   does not get affected by the SVG dimensions. */
+.dropdown-button .dropdown-label {
+	display: inline-block;
+	line-height: 1.25rem;
+	vertical-align: middle;
+}
+
+/* Make the icon not affect font metrics and keep a predictable size */
+.dropdown-button .dropdown-icon {
+	flex: none;
+	width: 1.25rem;
+	height: 1.25rem;
+	vertical-align: middle;
+}
+
+.dropdown-button:hover {
+	color: rgb(255 255 255 / 1);
+	background-color: var(--surface-800-70);
+}
+
+.dropdown-button:focus-visible {
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+}
+
+.dropdown-button:focus-visible:focus-visible {
+	box-shadow: 0 0 0 0px #fff, 0 0 0 calc(2px + 0px) rgb(59 130 246 / 0.5), 0 0 #0000;
+}
+
+.dropdown-icon {
+	height: 1.25rem;
+	width: 1.25rem;
+	opacity: 0.8;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	color: var(--color-muted);
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	font-size: 0.95rem; /* match nav-link */
+	line-height: 1.25rem;
+	left: 0px;
+
+/* Ensure spans inside links don't show an underline */
+.navbar a span,
+.navbar button span {
+    text-decoration: none;
+}
+	margin-top: 0.5rem;
+	width: 14rem;
+	background-color: var(--surface-900-95);
+	border-width: 1px;
+	border-color: rgb(51 65 85 / 0.7);
+	border-radius: 0.75rem;
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+	opacity: 0;
+	pointer-events: none;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+	visibility: hidden;
+}
+
+.dropdown-link {
+	display: flex;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	color: var(--color-muted-2);
+    background-color: transparent;
+	border-bottom-right-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.dropdown-link:hover {
+	background-color: var(--surface-800-60);
+	color: rgb(255 255 255 / 1);
+}
+
+.language-button {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-radius: 0.75rem;
+	border-width: 1px;
+	border-color: rgb(51 65 85 / 0.6);
+	color: var(--color-muted-2);
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: var(--surface-800-70);
+}
+
+.language-button:hover {
+	color: rgb(255 255 255 / 1);
+	border-color: rgb(71 85 105 / 1);
+	background-color: var(--surface-800-100);
+}
+
+.language-button:focus-visible {
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+}
+
+.language-button:focus-visible:focus-visible {
+	box-shadow: 0 0 0 0px #fff, 0 0 0 calc(2px + 0px) rgb(59 130 246 / 0.5), 0 0 #0000;
+}
+
+/* when the open class is toggled by Angular, make the menu visible */
+.dropdown-menu.open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transform: translateY(0);
+}

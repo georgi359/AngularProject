@@ -1,0 +1,27 @@
+<main id="ivsmy" class="main-content" *transloco="let t; currentLang as currentLang">
+<section class="contacts-page" *transloco="let t">
+  <div class="contacts-inner">
+    <h1 class="contacts-heading">{{ t('contacts.title') }}</h1>
+    <p class="contacts-lead">{{ t('contacts.description') }}</p>
+
+    <address class="contacts-address">
+      <strong>{{ t('contacts.addressLabel') }}</strong>
+      <div>123 Example Street</div>
+      <div>City, Country</div>
+      <div>{{ t('contacts.phone') }}: +1 555 555 555</div>
+    </address>
+  </div>
+
+    <app-scroller class="flex flex-row">
+        <li><img class="scroll_img" alt="Img1"
+                src="assets/images/random-logo-image.jfif"></li>
+        <li><img class="scroll_img" alt="Img2"
+        src="assets/images/stock-exchange-icon-png-6.png"></li>
+        <li><img class="scroll_img" alt="Img11"
+        src="assets/images/random-logo-image.jfif"></li>
+        <li><img class="scroll_img" alt="Img22"
+        src="assets/images/stock-exchange-icon-png-6.png"></li>
+        
+    </app-scroller>
+</section>
+</main>

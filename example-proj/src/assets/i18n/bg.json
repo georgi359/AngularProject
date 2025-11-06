@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Начало",
+    "documents": "Документи",
+    "news": "Новини",
+    "contacts": "Контакти",
+    "investor": "Информация за инвеститори",
+    "reports": "Доклади",
+    "other": "Други"
+  },
+  "home": {
+    "title": "Вашето модерно, изживяване",
+    "subtitle": "Превключвайте езици, разглеждайте документи и се наслаждавайте на плавни преходи.",
+    "fade": {
+      "titleA": "Производителност, която се усеща лесно",
+      "textA": "Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.",
+      "titleB": "Нежни преходи, ясни взаимодействия",
+      "textB": "Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum."
+    },
+    "block1": {
+      "title": "Издигната типография, която носи яснота",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, turpis in sodales lobortis, dui lorem gravida ligula."
+    },
+    "block2": {
+      "title": "Създадено за фокус и поток",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tellus non lorem ullamcorper pulvinar. Mauris sodales."
+    },
+    "key": {
+      "localization": "Локализация",
+      "localization_text": "Превключвайте между английски и български незабавно.",
+      "flex": "Флексбокс оформление",
+      "flex_text": "Адаптивна структура, оптимизирана за десктоп и мобилни.",
+      "anim": "Плавни анимации",
+      "anim_text": "Fade in/out ефекти насочват вниманието без разсейване."
+    }
+  },
+  "footer": {
+    "brand": "NovaSite"
+  }
+  ,
+  "contacts": {
+    "title": "Контакти",
+    "description": "Свържете се с нас - щастливи сме да помогнем.",
+    "addressLabel": "Офис",
+    "phone": "Телефон"
+  }
+}

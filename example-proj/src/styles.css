@@ -1,0 +1,40 @@
+/* Global CSS variables for colors */
+:root {
+	--color-bg: #0b1220;
+	--color-foreground: rgb(241 245 249 / 1);
+	--color-muted: rgb(148 163 184 / 1);
+	--color-muted-2: rgb(226 232 240 / 1);
+
+	--surface-900-60: rgb(15 23 42 / 0.6);
+	--surface-900-95: rgb(15 23 42 / 0.95);
+		--surface-900-40: rgb(15 23 42 / 0.4);
+		--surface-900-50: rgb(15 23 42 / 0.5);
+	--surface-800-70: rgb(30 41 59 / 0.7);
+	--surface-800-60: rgb(30 41 59 / 0.6);
+	--surface-800-80: rgb(30 41 59 / 0.8);
+	--surface-800-100: rgb(30 41 59 / 1);
+
+	--border-800-70: rgb(30 41 59 / 0.7);
+	--border-800-80: rgb(30 41 59 / 0.8);
+
+	--shadow-01: rgb(0 0 0 / 0.1);
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-foreground);
+}
+
+/* Remove underlines from span elements inside links and buttons globally.
+   This prevents embedded spans (icons, labels) from inheriting link underlines. */
+/* Ensure spans inside links and buttons never show underlines.
+   Some user-agent or vendor rules (e.g. a:-webkit-any-link) can reintroduce
+   text-decoration; make this selector specific and add !important to override.
+   We keep the rule narrow to only affect span children. */
+a:-webkit-any-link,
+a span,
+button span {
+	text-decoration: none;
+}

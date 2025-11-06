@@ -1,0 +1,68 @@
+.contacts-page {
+    padding: 2rem 1rem;
+
+}
+
+.contacts-inner {
+        max-width: 700rem;
+        padding: 1.5rem;
+    outline: 2px solid var(--border-800-80);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contacts-heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacts-lead {
+    color: rgb(148 163 184 / 1);
+    margin-bottom: 1.25rem;
+}
+
+.contacts-address {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Ensure the page content sits below the fixed navbar like the Home page */
+.main-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 7rem;
+    /* matches .main-content used on home */
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.scroller {
+    max-width: 700rem;
+    outline: 2px solid var(--border-800-80);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.scroll_img {
+    height: 50px;
+    width: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.scroller-inner {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    list-style: none;
+}

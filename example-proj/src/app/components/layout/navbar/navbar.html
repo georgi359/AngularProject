@@ -1,0 +1,116 @@
+<header id="i9qxs" class="header-wrapper">
+	<nav id="i1zvp" class="gjs-t-border navbar">
+		<a href="#" data-page-link="home" id="ixhtj" class="group brand-link">
+			<img alt="Logo" src="https://app.grapesjs.com/api/assets/random-image?query=%22abstract%20logo%22&amp;w=44&amp;h=44" id="i0hte" class="brand-logo" />
+			<div id="ierz3" class="brand-text">
+				<span id="ikw5c" class="brand-title">NovaSite</span>
+				<span data-i18n="brand.tagline" id="imtfb" class="brand-subtitle">Modern, localized, improving</span>
+			</div>
+		</a>
+		<div id="i9otx" class="navbar-right">
+			<ul id="ipmnb" class="nav-menu-desktop">
+				<li id="ifgz9" class="nav-item">
+					<a href="./index.html" data-page-link="home" data-i18n="nav.home" id="i6nl7" class="nav-link">Home</a>
+				</li>
+				<li id="nav-investor" class="group nav-item-dropdown">
+					<button type="button" id="investor-dropdown-btn" data-dropdown="investor" aria-haspopup="true" aria-expanded="false" aria-controls="investor-dropdown-panel" class="dropdown-button">
+						<span data-i18n="nav.investor" id="isooj" title="">Investor Information</span>
+						<img alt="Open dropdown" src="https://api.iconify.design/lucide-chevron-down.svg?color=%23e5e7eb" id="investor-dropdown-icon" class="dropdown-icon" />
+					</button>
+					<div id="investor-dropdown-panel" data-dropdown-panel="investor" role="menu" aria-label="Investor submenu" class="gjs-t-border dropdown-menu">
+						<a href="./documents.html" data-page-link="documents" data-i18n="nav.docs.policies" id="inv-link-policies" role="menuitem" class="dropdown-link">Policies</a>
+						<a href="./documents.html" data-page-link="documents" data-i18n="nav.docs.guides" id="inv-link-guides" role="menuitem" class="dropdown-link">Guides</a>
+						<a href="./documents.html" data-page-link="documents" data-i18n="nav.docs.reports" id="inv-link-reports" role="menuitem" class="dropdown-link">Reports</a>
+					</div>
+					<script id="iince">
+						document.addEventListener('DOMContentLoaded', function() {
+							try {
+								if (typeof i18n !== 'undefined') {
+									i18n.en['nav.investor'] = 'Investor Information';
+									i18n.bg['nav.investor'] = 'Инвеститорска информация';
+								}
+								if (typeof applyI18n === 'function') {
+									applyI18n();
+								}
+							} catch (e) {
+								/* silent */ }
+
+							const btn = document.getElementById('investor-dropdown-btn');
+							const panel = document.getElementById('investor-dropdown-panel');
+							const item = document.getElementById('nav-investor');
+
+							if (!btn || !panel || !item) return;
+
+							let isLocked = false; // stays open when toggled by click/keyboard
+
+							function openPanel() {
+								panel.classList.add('is-open');
+								btn.setAttribute('aria-expanded', 'true');
+							}
+
+							function closePanel() {
+								panel.classList.remove('is-open');
+								btn.setAttribute('aria-expanded', 'false');
+							}
+
+							function togglePanel() {
+								const isOpen = panel.classList.contains('is-open');
+								if (isOpen) {
+									// If open, toggle off explicitly
+									closePanel();
+									isLocked = false;
+								} else {
+									// Close other dropdown panels if any
+									document.querySelectorAll('[data-dropdown-panel]').forEach(p => {
+										p.classList.remove('is-open');
+									});
+									openPanel();
+									isLocked = true;
+								}
+							}
+
+							// Click toggles and locks open until toggled/off or outside click
+							btn.addEventListener('click', function(e) {
+								e.stopPropagation();
+								togglePanel();
+							});
+
+							// Hover works only when not locked
+							item.addEventListener('mouseenter', function() {
+								if (!isLocked) openPanel();
+							});
+							item.addEventListener('mouseleave', function() {
+								if (!isLocked) closePanel();
+							});
+
+							// Close on outside click
+							document.addEventListener('click', function(e) {
+								if (!item.contains(e.target)) {
+									closePanel();
+									isLocked = false;
+								}
+							});
+
+							// Keyboard accessibility
+							btn.addEventListener('keydown', function(e) {
+								const key = e.key;
+								if (key === 'Enter' || key === ' ') {
+									e.preventDefault();
+									togglePanel();
+								} else if (key === 'Escape') {
+									closePanel();
+									isLocked = false;
+									btn.focus();
+								}
+							});
+						});
+					</script>
+				</li>
+				<li id="i8j1u" class="nav-item">
+					<a href="./contacts.html" data-page-link="contacts" data-i18n="nav.contacts" id="iu26b" class="nav-link">Contacts</a>
+				</li>
+			</ul>
+			<button type="button" data-lang="en" id="i58gj" class="language-button">EN/BG</button>
+		</div>
+	</nav>
+</header>
